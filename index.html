@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
 
 	<!-- *Font links* -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Gelasio|Pacifico|Raleway|Ubuntu&display=swap" rel="stylesheet">
 
 </head>
@@ -17,24 +18,28 @@
 <body>
 	<div class="pg">
 
-		<header class="surfnav">
-			<div class="topsurf">
-				<img src="Images/bluesurf.png">
-			</div>
-			<nav class="topnav">
-				<a href="#" class="navbar fancy">Stories </a>
-				<a href="#" class="navbar fancy">Events </a>
-				<a href="#" class="navbar fancy">Places </a>
-				<a href="#" class="navbar fancy">Boards </a>
+		<header id="home" class="surfnav">
+			<!-- <div class="topsurf">
+				<a href="#home"><img src="Images/bluesurf.png"></a>
+			</div> -->
+			<nav class="topnav" id="myTopnav">
+				<a href="#home" class="navbar"><img src="Images/bluesurf.png"></a>
+				<a href="#stories" class="navbar">Stories </a>
+				<a href="#boards" class="navbar">Boards </a>
+				<a href="#events" class="navbar">Events </a>
+				<a href="#places" class="navbar">Places </a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
 			</nav>
 		</header>
 
 
 		<section class="section-1 container">
-			<div class="hero-img">
+			<div class="hero-img hero-img-mobile">
 				<div class="top">
-					<div class="head">Beautiful Escape</div>
-					<div class="text">One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.</div>
+					<div class="head head-mobile">Beautiful Escape</div>
+					<div class="text top-text-mobile">One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.</div>
 				</div>
 				<div class="surfingtop">
 				</div>
@@ -42,7 +47,7 @@
 		</section>
 
 
-		<section class="section-2 quote">
+		<section class="section-2 quote container">
 			<div class="said">Surfing is the most blissful experience you can have
 				on this planet, a taste of heaven.</div>
 			<div class="by">-John McCarthy</div>
@@ -50,7 +55,7 @@
 
 
 
-		<section class="section-3">
+		<section id="stories" class="section-3">
 
 			<div class="two">
 				<img src="Images/rock.png" class="seven">
@@ -76,7 +81,7 @@
 
 
 
-		<section class="section-4">
+		<section id="boards" class="section-4">
 			<div class="container">
 				<div class="shop">shop</div>
 				<div class="surfboards">Surfboards</div>
@@ -136,7 +141,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section id="events">
 			<div class="wave">
 				<div class="wavetext">
 					<div class="wavehead">Surf Training</div>
@@ -170,7 +175,7 @@
 			</div>
 		</section>
 
-		<div class="wave">
+		<div id="places" class="wave">
 			<img src="Images/bonfire.png" class="waveimg">
 			<div class="wavetext">
 				<div class="lasthead">
@@ -184,18 +189,30 @@
 
 		<footer>
 			<div class="bluesurf">
-				<img src="Images/bluesurf.png">
+				<a href="#home" class="navbar"><img src="Images/bluesurf.png"></a>
 			</div>
 
-			<nav class="topnav">
+			<!-- <nav class="topnav">
 				<a href="#" class="navbar">Stories </a>
 				<a href="#" class="navbar">Events </a>
 				<a href="#" class="navbar">Places </a>
 				<a href="#" class="navbar">Boards </a>
-			</nav>
+			</nav> -->
 		</footer>
 
 	</div>
+
+
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
 
 
 </body>
